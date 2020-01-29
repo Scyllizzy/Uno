@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,7 +44,7 @@ namespace Uno
         /// <summary>
         /// The number that will be given when the card needs to be shuffled
         /// </summary>
+        [Range(0, 108)]
         public int ShuffleNumber { get; set; }
-
     }
 }
