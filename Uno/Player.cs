@@ -29,7 +29,7 @@ namespace Uno
         public string LastName { get; set; }
 
         /// <summary>
-        /// A valid email address address with an @ symboland . something.
+        /// A valid email address with an @ symbol and . something.
         /// </summary>
         public string Email { get; set; }
 
