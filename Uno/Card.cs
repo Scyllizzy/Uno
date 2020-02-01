@@ -9,7 +9,7 @@ namespace Uno
     /// <summary>
     /// Represents a single card in a basic Uno deck
     /// </summary>
-    class Card
+    public class Card
     {
         /// <summary>
         /// Represents the type for a card
