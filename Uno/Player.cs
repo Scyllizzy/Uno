@@ -11,7 +11,7 @@ namespace Uno
     /// <summary>
     /// Represents an individual user(person playing uno)
     /// </summary>
-    class Player
+    public class Player
     {
         private double winLossRatio;
 
@@ -67,5 +67,10 @@ namespace Uno
         [Column(TypeName ="varchar(15)")]
         [Required]
         public string UserName { get; set; }
+
+        /// <summary>
+        /// The password for the player's account.
+        /// </summary>
+        public string Password { get; set; }
     }
 }
