@@ -32,7 +32,6 @@
             this.BtnNextTurn = new System.Windows.Forms.Button();
             this.BtnPause = new System.Windows.Forms.Button();
             this.BtnUnPause = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PcbxPauseGif)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,21 +73,11 @@
             this.BtnUnPause.UseVisualStyleBackColor = true;
             this.BtnUnPause.Click += new System.EventHandler(this.BtnUnPause_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(172, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(979, 440);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // FrmUno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1283, 711);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnUnPause);
             this.Controls.Add(this.BtnPause);
             this.Controls.Add(this.BtnNextTurn);
@@ -106,7 +95,6 @@
         private System.Windows.Forms.Button BtnNextTurn;
         private System.Windows.Forms.Button BtnPause;
         private System.Windows.Forms.Button BtnUnPause;
-        private System.Windows.Forms.Button button1;
     }
 }
 
