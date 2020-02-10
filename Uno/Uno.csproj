@@ -76,6 +76,9 @@
     <Compile Include="Data\PlayerDb.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002011923229_AddedPlayer.resx">
       <DependentUpon>202002011923229_AddedPlayer.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +90,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -104,6 +108,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Game Manager\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kitty.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

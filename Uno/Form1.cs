@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Uno.Properties;
 
 namespace Uno
 {
-    public partial class Form1 : Form
+    public partial class FrmUno : Form
     {
-        public Form1()
+        public FrmUno()
         {
             InitializeComponent();
+            PcbxPauseGif.Image = Resources.Kitty;
         }
     }
 }
