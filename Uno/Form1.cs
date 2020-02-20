@@ -49,5 +49,11 @@ namespace Uno
             BtnUnPause.Visible = false;
             PcbxPauseGif.Visible = false;
         }
+
+        private void FrmUno_Load(object sender, EventArgs e)
+        {
+            var list = Deck.GetCreateDeck();
+            listBoxDeck.DataSource = list;
+        }
     }
 }

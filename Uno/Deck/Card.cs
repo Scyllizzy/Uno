@@ -46,5 +46,13 @@ namespace Uno
         /// </summary>
         [Range(0, 108)]
         public int ShuffleNumber { get; set; }
+
+        /// <summary>
+        /// Override ToString() to display user-friendly card details
+        /// </summary>
+        public override string ToString()
+        {
+            return $"| {CardColor} | {CardType} |";
+        }
     }
 }
