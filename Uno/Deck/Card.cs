@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 namespace Uno
 {
     /// <summary>
-    /// Represents a single card in a basic Uno deck
+    /// Represents a single card in a basic Uno deck.
     /// </summary>
     public class Card
     {
         /// <summary>
-        /// Represents the type for a card
+        /// Represents the type for a card.
         /// </summary>
         public enum Type
         {
@@ -22,7 +22,7 @@ namespace Uno
         }
 
         /// <summary>
-        /// Represents the color of a card
+        /// Represents the color of a card.
         /// </summary>
         public enum Color
         {
@@ -37,18 +37,18 @@ namespace Uno
 
         /// <summary>
         /// What color the card is.
-        /// Ex (Green, Purple, Orange...)
+        /// Ex. (Green, Purple, Orange...)
         /// </summary>
         public Color CardColor { get; set; }
 
         /// <summary>
-        /// The number that will be given when the card needs to be shuffled
+        /// The number that will be given when the card needs to be shuffled.
         /// </summary>
         [Range(0, 108)]
         public int ShuffleNumber { get; set; }
 
         /// <summary>
-        /// Override ToString() to display user-friendly card details
+        /// Override ToString() to display user-friendly card details.
         /// </summary>
         public override string ToString()
         {

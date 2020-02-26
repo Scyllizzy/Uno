@@ -11,6 +11,10 @@ namespace Uno
 {
     public class Deck
     {
+        /// <summary>
+        /// Creates a standard deck of Uno cards and puts them in a list of cards.
+        /// Returns the list of cards.
+        /// </summary>
         public static List<Card> GetCreateDeck()
         {
             var cards = new List<Card>();
