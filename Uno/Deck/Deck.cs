@@ -82,6 +82,10 @@ namespace Uno
             return cards;
         }
 
+        /// <summary>
+        /// Shuffles the list of cards passed in and returns that list of cards.
+        /// </summary>
+        /// <param name="cards">The list of cards to be shuffled.</param>
         public static List<Card> Shuffle(List<Card> cards)
         {
             Random rand = new Random();
