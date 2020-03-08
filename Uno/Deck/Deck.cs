@@ -41,22 +41,19 @@ namespace Uno
                                 cards.Add(new Card()
                                 {
                                     CardColor = color,
-                                    CardType = cardType,
-                                    ShuffleNumber = rand.Next(1, 108)//Random is exclusive for upper bound
+                                    CardType = cardType
                                 });
                                 cards.Add(new Card()
                                 {
                                     CardColor = color,
-                                    CardType = cardType,
-                                    ShuffleNumber = rand.Next(1, 108)//Random is exclusive for upper bound
+                                    CardType = cardType
                                 });
                                 break;
                             case Type.Zero:
                                 cards.Add(new Card()
                                 {
                                     CardColor = color,
-                                    CardType = cardType,
-                                    ShuffleNumber = rand.Next(1, 108)//Random is exclusive for upper bound
+                                    CardType = cardType
                                 });
                                 break;
                         }
@@ -69,8 +66,7 @@ namespace Uno
                         cards.Add(new Card()
                         {
                             CardColor = Color.Black,
-                            CardType = Type.Wild,
-                            ShuffleNumber = rand.Next(1, 109)
+                            CardType = Type.Wild
                         });
                     }
                     for (int wild4 = 0; wild4 < count; wild4++)
@@ -78,12 +74,25 @@ namespace Uno
                         cards.Add(new Card()
                         {
                             CardColor = Color.Black,
-                            CardType = Type.WildDraw4,
-                            ShuffleNumber = rand.Next(1, 109)
+                            CardType = Type.WildDraw4
                         });
                     }
                 }
             }
+            return cards;
+        }
+
+        public static List<Card> Shuffle(List<Card> cards)
+        {
+            Random rand = new Random();
+
+            foreach (Card card in cards)
+            {
+                card.ShuffleNumber = rand.Next(1, 108);
+            }
+
+            cards = cards.OrderBy(c => c.ShuffleNumber).ToList();
+
             return cards;
         }
     }

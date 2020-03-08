@@ -52,7 +52,12 @@ namespace Uno
 
         private void FrmUno_Load(object sender, EventArgs e)
         {
+            // Create Deck
             var list = Deck.GetCreateDeck();
+
+            // Shuffle Deck
+            list = Deck.Shuffle(list);
+
             listBoxDeck.DataSource = list;
         }
     }

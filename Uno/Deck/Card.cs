@@ -45,7 +45,7 @@ namespace Uno
         /// The number that will be given when the card needs to be shuffled
         /// </summary>
         [Range(0, 108)]
-        public int ShuffleNumber { get; set; }
+        public int? ShuffleNumber { get; set; }
 
         /// <summary>
         /// Override ToString() to display user-friendly card details
