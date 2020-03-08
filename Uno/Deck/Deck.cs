@@ -11,7 +11,7 @@ namespace Uno
 {
     public class Deck
     {
-        public static List<Card> GetCreateDeck()
+        public static List<Card> CreateDeck()
         {
             var cards = new List<Card>();
             Random rand = new Random();
