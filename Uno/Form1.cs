@@ -53,7 +53,7 @@ namespace Uno
         private void FrmUno_Load(object sender, EventArgs e)
         {
             // Create Deck
-            var list = Deck.GetCreateDeck();
+            var list = Deck.CreateDeck();
 
             // Shuffle Deck
             list = Deck.Shuffle(list);
