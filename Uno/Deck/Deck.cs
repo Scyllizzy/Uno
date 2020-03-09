@@ -15,7 +15,7 @@ namespace Uno
         /// Creates a standard deck of Uno cards and puts them in a list of cards.
         /// Returns the list of cards.
         /// </summary>
-        public static List<Card> GetCreateDeck()
+        public static List<Card> CreateDeck()
         {
             var cards = new List<Card>();
             Random rand = new Random();
