@@ -16,7 +16,7 @@ namespace Uno
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmUno());
+            Application.Run(new GameMainMenu());
         }
     }
 }

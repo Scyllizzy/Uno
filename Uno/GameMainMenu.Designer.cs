@@ -102,6 +102,7 @@
             this.Controls.Add(this.Lbl);
             this.Name = "GameMainMenu";
             this.Text = "GameMainMenu";
+            this.Load += new System.EventHandler(this.GameMainMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

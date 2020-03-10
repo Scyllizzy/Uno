@@ -16,5 +16,11 @@ namespace Uno
         {
             InitializeComponent();
         }
+
+        private void GameMainMenu_Load(object sender, EventArgs e)
+        {
+            List<Player> allPlayers = PlayerDb.GetAllPlayers();
+            ListBoxAvailablePlayers.DataSource = allPlayers;
+        }
     }
 }
