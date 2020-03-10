@@ -70,6 +70,7 @@
             this.BtnAddPlayer.TabIndex = 3;
             this.BtnAddPlayer.Text = "Add player";
             this.BtnAddPlayer.UseVisualStyleBackColor = true;
+            this.BtnAddPlayer.Click += new System.EventHandler(this.BtnAddPlayer_Click);
             // 
             // BtnEditPlayer
             // 

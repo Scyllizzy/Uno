@@ -22,5 +22,11 @@ namespace Uno
             List<Player> allPlayers = PlayerDb.GetAllPlayers();
             ListBoxAvailablePlayers.DataSource = allPlayers;
         }
+
+        private void BtnAddPlayer_Click(object sender, EventArgs e)
+        {
+            AddPlayerForm addPlayer = new AddPlayerForm();
+            addPlayer.ShowDialog();
+        }
     }
 }
