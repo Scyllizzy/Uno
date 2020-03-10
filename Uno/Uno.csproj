@@ -70,6 +70,10 @@
     <Compile Include="Migrations\202002011923229_AddedPlayer.designer.cs">
       <DependentUpon>202002011923229_AddedPlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003100438178_AddedPlayers.cs" />
+    <Compile Include="Migrations\202003100438178_AddedPlayers.designer.cs">
+      <DependentUpon>202003100438178_AddedPlayers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Player\Player.cs" />
     <Compile Include="Data\PlayerContext.cs" />
@@ -81,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002011923229_AddedPlayer.resx">
       <DependentUpon>202002011923229_AddedPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003100438178_AddedPlayers.resx">
+      <DependentUpon>202003100438178_AddedPlayers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -19,7 +19,6 @@
                         Loss = c.Int(nullable: false),
                         WinLossRatio = c.Double(nullable: false),
                         UserName = c.String(),
-                        Password = c.String(),
                     })
                 .PrimaryKey(t => t.PlayerID);
             

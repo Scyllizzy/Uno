@@ -24,14 +24,14 @@ namespace Uno
         /// <summary>
         /// The legal first name of the user.
         /// </summary>
-        [Column(TypeName = "varchar(25)")]
+        [StringLength(15, MinimumLength = 1)]
         [Required]
         public string FirstName { get; set; }
 
         /// <summary>
         /// The legal first name of the user.
         /// </summary>
-        [Column(TypeName = "varchar(25)")]
+        [StringLength(15, MinimumLength = 1)]
         [Required]
         public string LastName { get; set; }
 
@@ -65,13 +65,10 @@ namespace Uno
         /// <summary>
         /// A unique UserName 1 - 15.
         /// </summary>
-        [Column(TypeName ="varchar(15)")]
+        [StringLength(15, MinimumLength = 5)]
         [Required]
         public string UserName { get; set; }
 
-        /// <summary>
-        /// The password for the player's account.
-        /// </summary>
-        public string Password { get; set; }
+
     }
 }
