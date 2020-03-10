@@ -36,7 +36,9 @@ namespace Uno
             {
                 selectedPlayers.Add(p);
             }
-            MessageBox.Show(string.Join(", ", selectedPlayers));
+            MessageBox.Show(string.Join(" vs ", selectedPlayers));
+            FrmUno game = new FrmUno();
+            game.ShowDialog();
         }
     }
 }

@@ -72,11 +72,11 @@
     <Compile Include="GameMainMenu.Designer.cs">
       <DependentUpon>GameMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameWindow.cs">
+    <Compile Include="FrmUno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GameWindow.Designer.cs">
-      <DependentUpon>GameWindow.cs</DependentUpon>
+    <Compile Include="FrmUno.Designer.cs">
+      <DependentUpon>FrmUno.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202002011923229_AddedPlayer.cs" />
     <Compile Include="Migrations\202002011923229_AddedPlayer.designer.cs">
@@ -102,8 +102,8 @@
     <EmbeddedResource Include="GameMainMenu.resx">
       <DependentUpon>GameMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GameWindow.resx">
-      <DependentUpon>GameWindow.cs</DependentUpon>
+    <EmbeddedResource Include="FrmUno.resx">
+      <DependentUpon>FrmUno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002011923229_AddedPlayer.resx">
       <DependentUpon>202002011923229_AddedPlayer.cs</DependentUpon>
