@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPlayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPlayerForm.Designer.cs">
+      <DependentUpon>AddPlayerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Deck\Card.cs" />
     <Compile Include="Deck\Deck.cs" />
     <Compile Include="GameMainMenu.cs">
@@ -86,6 +92,9 @@
     <Compile Include="Data\PlayerDb.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddPlayerForm.resx">
+      <DependentUpon>AddPlayerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameMainMenu.resx">
       <DependentUpon>GameMainMenu.cs</DependentUpon>
     </EmbeddedResource>
