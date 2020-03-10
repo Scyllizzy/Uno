@@ -76,7 +76,7 @@ namespace Uno
 
         public override string ToString()
         {
-            return $"{UserName} - W/L: {WinLossRatio()}";
+            return $"{UserName}";
         }
     }
 }

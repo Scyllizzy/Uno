@@ -50,6 +50,7 @@
             this.ListBoxAvailablePlayers.FormattingEnabled = true;
             this.ListBoxAvailablePlayers.Location = new System.Drawing.Point(26, 39);
             this.ListBoxAvailablePlayers.Name = "ListBoxAvailablePlayers";
+            this.ListBoxAvailablePlayers.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.ListBoxAvailablePlayers.Size = new System.Drawing.Size(120, 134);
             this.ListBoxAvailablePlayers.TabIndex = 1;
             // 
@@ -61,6 +62,7 @@
             this.BtnStartGame.TabIndex = 2;
             this.BtnStartGame.Text = "Start Game!";
             this.BtnStartGame.UseVisualStyleBackColor = true;
+            this.BtnStartGame.Click += new System.EventHandler(this.BtnStartGame_Click);
             // 
             // BtnAddPlayer
             // 

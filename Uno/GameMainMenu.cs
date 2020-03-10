@@ -28,5 +28,15 @@ namespace Uno
             AddPlayerForm addPlayer = new AddPlayerForm();
             addPlayer.ShowDialog();
         }
+
+        private void BtnStartGame_Click(object sender, EventArgs e)
+        {
+            List<Player> selectedPlayers = new List<Player>();
+            foreach (Player p in ListBoxAvailablePlayers.SelectedItems)
+            {
+                selectedPlayers.Add(p);
+            }
+            MessageBox.Show(string.Join(", ", selectedPlayers));
+        }
     }
 }
