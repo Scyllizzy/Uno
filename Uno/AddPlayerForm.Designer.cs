@@ -111,6 +111,7 @@
             this.BtnSubmitAdd.TabIndex = 8;
             this.BtnSubmitAdd.Text = "Add Player!";
             this.BtnSubmitAdd.UseVisualStyleBackColor = true;
+            this.BtnSubmitAdd.Click += new System.EventHandler(this.BtnSubmitAdd_Click);
             // 
             // AddPlayerForm
             // 

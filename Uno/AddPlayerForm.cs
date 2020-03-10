@@ -16,5 +16,17 @@ namespace Uno
         {
             InitializeComponent();
         }
+
+        private void BtnSubmitAdd_Click(object sender, EventArgs e)
+        {
+            Player p = new Player()
+            {
+                FirstName = TxtFirstName.Text,
+                LastName = TxtLastName.Text,
+                UserName = TxtUsername.Text,
+                Email = TxtEmail.Text.ToLower()
+            };
+            PlayerDb.Add(p);
+        }
     }
 }
