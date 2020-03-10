@@ -62,14 +62,21 @@ namespace Uno
 
         public double WinLossRatio()
         {
-            winLossRatio = Win / Loss;
+            if (Loss == 0)
+            {
+                winLossRatio = Win;
+            }
+            else
+            {
+                winLossRatio = Win / Loss;
+            }
             return winLossRatio;
         }
 
 
         public override string ToString()
         {
-            return $"{UserName} {winLossRatio}";
+            return $"{UserName} - W/L: {WinLossRatio()}";
         }
     }
 }
