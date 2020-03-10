@@ -60,11 +60,11 @@
   <ItemGroup>
     <Compile Include="Deck\Card.cs" />
     <Compile Include="Deck\Deck.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="GameWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GameWindow.Designer.cs">
+      <DependentUpon>GameWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202002011923229_AddedPlayer.cs" />
     <Compile Include="Migrations\202002011923229_AddedPlayer.designer.cs">
@@ -80,8 +80,8 @@
     <Compile Include="Data\PlayerDb.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="GameWindow.resx">
+      <DependentUpon>GameWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002011923229_AddedPlayer.resx">
       <DependentUpon>202002011923229_AddedPlayer.cs</DependentUpon>
