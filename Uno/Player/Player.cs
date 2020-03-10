@@ -13,7 +13,7 @@ namespace Uno
     /// </summary>
     public class Player
     {
-        private double? winLossRatio;
+        private double winLossRatio;
 
         /// <summary>
         /// Primary key / identity column.
@@ -54,25 +54,22 @@ namespace Uno
         public int Loss { get; set; }
 
         /// <summary>
-        /// The Win/Loss Ratio Win/Loss = WinLossRatio.
-        /// </summary>
-        public double? WinLossRatio 
-        { 
-            get => winLossRatio;
-            set => winLossRatio = Win / Loss;
-        }
-
-        /// <summary>
         /// A unique UserName 1 - 15.
         /// </summary>
         [StringLength(15, MinimumLength = 5)]
         [Required]
         public string UserName { get; set; }
 
+        public double WinLossRatio()
+        {
+            winLossRatio = Win / Loss;
+            return winLossRatio;
+        }
+
 
         public override string ToString()
         {
-            return $"{UserName}";
+            return $"{UserName} {winLossRatio}";
         }
     }
 }
