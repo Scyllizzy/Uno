@@ -78,17 +78,9 @@
     <Compile Include="FrmUno.Designer.cs">
       <DependentUpon>FrmUno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202002011923229_AddedPlayer.cs" />
-    <Compile Include="Migrations\202002011923229_AddedPlayer.designer.cs">
-      <DependentUpon>202002011923229_AddedPlayer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003100438178_AddedPlayers.cs" />
-    <Compile Include="Migrations\202003100438178_AddedPlayers.designer.cs">
-      <DependentUpon>202003100438178_AddedPlayers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003100554438_AddedPlayers1.cs" />
-    <Compile Include="Migrations\202003100554438_AddedPlayers1.designer.cs">
-      <DependentUpon>202003100554438_AddedPlayers1.cs</DependentUpon>
+    <Compile Include="Migrations\202003101614575_init.cs" />
+    <Compile Include="Migrations\202003101614575_init.designer.cs">
+      <DependentUpon>202003101614575_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Player\Player.cs" />
@@ -105,14 +97,8 @@
     <EmbeddedResource Include="FrmUno.resx">
       <DependentUpon>FrmUno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002011923229_AddedPlayer.resx">
-      <DependentUpon>202002011923229_AddedPlayer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003100438178_AddedPlayers.resx">
-      <DependentUpon>202003100438178_AddedPlayers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003100554438_AddedPlayers1.resx">
-      <DependentUpon>202003100554438_AddedPlayers1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003101614575_init.resx">
+      <DependentUpon>202003101614575_init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddedPlayer : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
@@ -12,13 +12,12 @@
                 c => new
                     {
                         PlayerID = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(),
-                        LastName = c.String(),
-                        Email = c.String(),
+                        FirstName = c.String(nullable: false, maxLength: 15),
+                        LastName = c.String(nullable: false, maxLength: 15),
+                        Email = c.String(nullable: false),
                         Win = c.Int(nullable: false),
                         Loss = c.Int(nullable: false),
-                        WinLossRatio = c.Double(nullable: false),
-                        UserName = c.String(),
+                        UserName = c.String(nullable: false, maxLength: 15),
                     })
                 .PrimaryKey(t => t.PlayerID);
             

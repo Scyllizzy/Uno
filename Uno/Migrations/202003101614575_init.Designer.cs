@@ -7,13 +7,13 @@ namespace Uno.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class AddedPlayers1 : IMigrationMetadata
+    public sealed partial class init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedPlayers1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
         
         string IMigrationMetadata.Id
         {
-            get { return "202003100554438_AddedPlayers1"; }
+            get { return "202003101614575_init"; }
         }
         
         string IMigrationMetadata.Source
