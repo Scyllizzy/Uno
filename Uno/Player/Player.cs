@@ -13,7 +13,7 @@ namespace Uno
     /// </summary>
     public class Player
     {
-        private double? winLossRatio;
+        private double winLossRatio;
 
         /// <summary>
         /// Primary key / identity column.
@@ -24,14 +24,14 @@ namespace Uno
         /// <summary>
         /// The legal first name of the user.
         /// </summary>
-        [Column(TypeName = "varchar(25)")]
+        [StringLength(15, MinimumLength = 1)]
         [Required]
         public string FirstName { get; set; }
 
         /// <summary>
         /// The legal first name of the user.
         /// </summary>
-        [Column(TypeName = "varchar(25)")]
+        [StringLength(15, MinimumLength = 1)]
         [Required]
         public string LastName { get; set; }
 
@@ -54,24 +54,29 @@ namespace Uno
         public int Loss { get; set; }
 
         /// <summary>
-        /// The Win/Loss Ratio Win/Loss = WinLossRatio.
-        /// </summary>
-        public double? WinLossRatio 
-        { 
-            get => winLossRatio;
-            set => winLossRatio = Win / Loss;
-        }
-
-        /// <summary>
         /// A unique UserName 1 - 15.
         /// </summary>
-        [Column(TypeName ="varchar(15)")]
+        [StringLength(15, MinimumLength = 5)]
         [Required]
         public string UserName { get; set; }
 
-        /// <summary>
-        /// The password for the player's account.
-        /// </summary>
-        public string Password { get; set; }
+        public double WinLossRatio()
+        {
+            if (Loss == 0)
+            {
+                winLossRatio = Win;
+            }
+            else
+            {
+                winLossRatio = Win / Loss;
+            }
+            return winLossRatio;
+        }
+
+
+        public override string ToString()
+        {
+            return $"{UserName}";
+        }
     }
 }
