@@ -37,6 +37,11 @@
             this.TxtUsername = new System.Windows.Forms.TextBox();
             this.TxtLastName = new System.Windows.Forms.TextBox();
             this.BtnSubmitAdd = new System.Windows.Forms.Button();
+            this.lblFNameErrMsg = new System.Windows.Forms.Label();
+            this.lblLNameErrMsg = new System.Windows.Forms.Label();
+            this.lblUsernameErrMsg = new System.Windows.Forms.Label();
+            this.lblEmailErrMsg = new System.Windows.Forms.Label();
+            this.lblAddResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblFirstName
@@ -113,11 +118,67 @@
             this.BtnSubmitAdd.UseVisualStyleBackColor = true;
             this.BtnSubmitAdd.Click += new System.EventHandler(this.BtnSubmitAdd_Click);
             // 
+            // lblFNameErrMsg
+            // 
+            this.lblFNameErrMsg.AutoSize = true;
+            this.lblFNameErrMsg.ForeColor = System.Drawing.Color.Red;
+            this.lblFNameErrMsg.Location = new System.Drawing.Point(254, 37);
+            this.lblFNameErrMsg.Name = "lblFNameErrMsg";
+            this.lblFNameErrMsg.Size = new System.Drawing.Size(11, 13);
+            this.lblFNameErrMsg.TabIndex = 9;
+            this.lblFNameErrMsg.Text = "*";
+            // 
+            // lblLNameErrMsg
+            // 
+            this.lblLNameErrMsg.AutoSize = true;
+            this.lblLNameErrMsg.ForeColor = System.Drawing.Color.Red;
+            this.lblLNameErrMsg.Location = new System.Drawing.Point(254, 65);
+            this.lblLNameErrMsg.Name = "lblLNameErrMsg";
+            this.lblLNameErrMsg.Size = new System.Drawing.Size(11, 13);
+            this.lblLNameErrMsg.TabIndex = 10;
+            this.lblLNameErrMsg.Text = "*";
+            // 
+            // lblUsernameErrMsg
+            // 
+            this.lblUsernameErrMsg.AutoSize = true;
+            this.lblUsernameErrMsg.ForeColor = System.Drawing.Color.Red;
+            this.lblUsernameErrMsg.Location = new System.Drawing.Point(254, 94);
+            this.lblUsernameErrMsg.Name = "lblUsernameErrMsg";
+            this.lblUsernameErrMsg.Size = new System.Drawing.Size(11, 13);
+            this.lblUsernameErrMsg.TabIndex = 11;
+            this.lblUsernameErrMsg.Text = "*";
+            // 
+            // lblEmailErrMsg
+            // 
+            this.lblEmailErrMsg.AutoSize = true;
+            this.lblEmailErrMsg.ForeColor = System.Drawing.Color.Red;
+            this.lblEmailErrMsg.Location = new System.Drawing.Point(254, 124);
+            this.lblEmailErrMsg.Name = "lblEmailErrMsg";
+            this.lblEmailErrMsg.Size = new System.Drawing.Size(11, 13);
+            this.lblEmailErrMsg.TabIndex = 12;
+            this.lblEmailErrMsg.Text = "*";
+            // 
+            // lblAddResult
+            // 
+            this.lblAddResult.AutoSize = true;
+            this.lblAddResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddResult.ForeColor = System.Drawing.Color.Black;
+            this.lblAddResult.Location = new System.Drawing.Point(69, 199);
+            this.lblAddResult.Name = "lblAddResult";
+            this.lblAddResult.Size = new System.Drawing.Size(21, 20);
+            this.lblAddResult.TabIndex = 13;
+            this.lblAddResult.Text = "...";
+            // 
             // AddPlayerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(293, 211);
+            this.ClientSize = new System.Drawing.Size(379, 231);
+            this.Controls.Add(this.lblAddResult);
+            this.Controls.Add(this.lblEmailErrMsg);
+            this.Controls.Add(this.lblUsernameErrMsg);
+            this.Controls.Add(this.lblLNameErrMsg);
+            this.Controls.Add(this.lblFNameErrMsg);
             this.Controls.Add(this.BtnSubmitAdd);
             this.Controls.Add(this.TxtLastName);
             this.Controls.Add(this.TxtUsername);
@@ -145,5 +206,10 @@
         private System.Windows.Forms.TextBox TxtUsername;
         private System.Windows.Forms.TextBox TxtLastName;
         private System.Windows.Forms.Button BtnSubmitAdd;
+        private System.Windows.Forms.Label lblFNameErrMsg;
+        private System.Windows.Forms.Label lblLNameErrMsg;
+        private System.Windows.Forms.Label lblUsernameErrMsg;
+        private System.Windows.Forms.Label lblEmailErrMsg;
+        private System.Windows.Forms.Label lblAddResult;
     }
 }
