@@ -34,14 +34,17 @@
             this.BtnAddPlayer = new System.Windows.Forms.Button();
             this.BtnEditPlayer = new System.Windows.Forms.Button();
             this.BtnDeletePlayer = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblErrMsg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Lbl
             // 
             this.Lbl.AutoSize = true;
-            this.Lbl.Location = new System.Drawing.Point(49, 19);
+            this.Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl.Location = new System.Drawing.Point(32, 16);
             this.Lbl.Name = "Lbl";
-            this.Lbl.Size = new System.Drawing.Size(74, 13);
+            this.Lbl.Size = new System.Drawing.Size(116, 18);
             this.Lbl.TabIndex = 0;
             this.Lbl.Text = "Select Players";
             // 
@@ -51,12 +54,12 @@
             this.ListBoxAvailablePlayers.Location = new System.Drawing.Point(26, 39);
             this.ListBoxAvailablePlayers.Name = "ListBoxAvailablePlayers";
             this.ListBoxAvailablePlayers.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.ListBoxAvailablePlayers.Size = new System.Drawing.Size(120, 134);
+            this.ListBoxAvailablePlayers.Size = new System.Drawing.Size(129, 316);
             this.ListBoxAvailablePlayers.TabIndex = 1;
             // 
             // BtnStartGame
             // 
-            this.BtnStartGame.Location = new System.Drawing.Point(79, 191);
+            this.BtnStartGame.Location = new System.Drawing.Point(176, 309);
             this.BtnStartGame.Name = "BtnStartGame";
             this.BtnStartGame.Size = new System.Drawing.Size(136, 46);
             this.BtnStartGame.TabIndex = 2;
@@ -66,9 +69,9 @@
             // 
             // BtnAddPlayer
             // 
-            this.BtnAddPlayer.Location = new System.Drawing.Point(176, 52);
+            this.BtnAddPlayer.Location = new System.Drawing.Point(339, 104);
             this.BtnAddPlayer.Name = "BtnAddPlayer";
-            this.BtnAddPlayer.Size = new System.Drawing.Size(119, 23);
+            this.BtnAddPlayer.Size = new System.Drawing.Size(119, 39);
             this.BtnAddPlayer.TabIndex = 3;
             this.BtnAddPlayer.Text = "Add player";
             this.BtnAddPlayer.UseVisualStyleBackColor = true;
@@ -76,27 +79,48 @@
             // 
             // BtnEditPlayer
             // 
-            this.BtnEditPlayer.Location = new System.Drawing.Point(176, 92);
+            this.BtnEditPlayer.Location = new System.Drawing.Point(339, 208);
             this.BtnEditPlayer.Name = "BtnEditPlayer";
-            this.BtnEditPlayer.Size = new System.Drawing.Size(119, 23);
+            this.BtnEditPlayer.Size = new System.Drawing.Size(119, 39);
             this.BtnEditPlayer.TabIndex = 4;
             this.BtnEditPlayer.Text = "Edit player";
             this.BtnEditPlayer.UseVisualStyleBackColor = true;
             // 
             // BtnDeletePlayer
             // 
-            this.BtnDeletePlayer.Location = new System.Drawing.Point(176, 132);
+            this.BtnDeletePlayer.Location = new System.Drawing.Point(339, 312);
             this.BtnDeletePlayer.Name = "BtnDeletePlayer";
-            this.BtnDeletePlayer.Size = new System.Drawing.Size(119, 23);
+            this.BtnDeletePlayer.Size = new System.Drawing.Size(119, 39);
             this.BtnDeletePlayer.TabIndex = 5;
             this.BtnDeletePlayer.Text = "Delete player";
             this.BtnDeletePlayer.UseVisualStyleBackColor = true;
+            this.BtnDeletePlayer.Click += new System.EventHandler(this.BtnDeletePlayer_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(193, 158);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 6;
+            // 
+            // lblErrMsg
+            // 
+            this.lblErrMsg.AutoSize = true;
+            this.lblErrMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrMsg.Location = new System.Drawing.Point(187, 145);
+            this.lblErrMsg.Name = "lblErrMsg";
+            this.lblErrMsg.Size = new System.Drawing.Size(45, 32);
+            this.lblErrMsg.TabIndex = 7;
+            this.lblErrMsg.Text = "label2\r\n\r\n";
             // 
             // GameMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 260);
+            this.ClientSize = new System.Drawing.Size(496, 383);
+            this.Controls.Add(this.lblErrMsg);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnDeletePlayer);
             this.Controls.Add(this.BtnEditPlayer);
             this.Controls.Add(this.BtnAddPlayer);
@@ -119,5 +143,7 @@
         private System.Windows.Forms.Button BtnAddPlayer;
         private System.Windows.Forms.Button BtnEditPlayer;
         private System.Windows.Forms.Button BtnDeletePlayer;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblErrMsg;
     }
 }

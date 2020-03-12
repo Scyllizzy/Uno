@@ -18,12 +18,14 @@ namespace Uno
             InitializeComponent();
         }
 
-        
+        public Player NewPlayer { get; set; }
+
         private void BtnSubmitAdd_Click(object sender, EventArgs e)
         {
             
             if (ValidateFormInput())
             {
+                BtnSubmitAdd.DialogResult = DialogResult.Yes;
                 Player p = new Player()
                 {
                     FirstName = TxtFirstName.Text,
@@ -31,16 +33,21 @@ namespace Uno
                     UserName = TxtUsername.Text,
                     Email = TxtEmail.Text.ToLower()
                 };
+                NewPlayer = p;
                 lblAddResult.ForeColor = Color.Green;
                 lblAddResult.Text = $"{p.UserName} can now play Uno!";
                 PlayerDb.Add(p);
-                Timer timer = new System.Windows.Forms.Timer();
-                timer.Interval = 2000;
+                Timer timer = new Timer(); // Auto close form after 2 seconds.
+                timer.Interval = 1000;
                 timer.Tick += new EventHandler(timer_Tick);
                 timer.Start();
+                
             }
         }
 
+        /// <summary>
+        /// Closes form 2 seconds after successful form validation.
+        /// </summary>
         void timer_Tick(object sender, EventArgs e)
         {
             this.Close();

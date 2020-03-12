@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="Deck\Card.cs" />
     <Compile Include="Deck\Deck.cs" />
+    <Compile Include="DeletePlayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletePlayerForm.Designer.cs">
+      <DependentUpon>DeletePlayerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddPlayerForm.resx">
       <DependentUpon>AddPlayerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletePlayerForm.resx">
+      <DependentUpon>DeletePlayerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameMainMenu.resx">
       <DependentUpon>GameMainMenu.cs</DependentUpon>

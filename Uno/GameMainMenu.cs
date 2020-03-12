@@ -19,18 +19,26 @@ namespace Uno
 
         private void GameMainMenu_Load(object sender, EventArgs e)
         {
-            List<Player> allPlayers = PlayerDb.GetAllPlayers();
-            ListBoxAvailablePlayers.DataSource = allPlayers;
+            lblErrMsg.Text = "";
+            PopulatePlayerList();
         }
 
         private void BtnAddPlayer_Click(object sender, EventArgs e)
         {
+            lblErrMsg.Text = "";
             AddPlayerForm addPlayer = new AddPlayerForm();
-            addPlayer.ShowDialog();
+            DialogResult result = addPlayer.ShowDialog();
+            if (result == DialogResult.Yes)
+            {
+                Player p = addPlayer.NewPlayer;
+                ListBoxAvailablePlayers.Items.Add(p);
+            }
+            PopulatePlayerList();
         }
 
         private void BtnStartGame_Click(object sender, EventArgs e)
         {
+            lblErrMsg.Text = "";
             List<Player> selectedPlayers = new List<Player>();
             foreach (Player p in ListBoxAvailablePlayers.SelectedItems)
             {
@@ -39,6 +47,44 @@ namespace Uno
             MessageBox.Show(string.Join(" vs ", selectedPlayers));
             FrmUno game = new FrmUno();
             game.ShowDialog();
+        }
+
+        private void BtnDeletePlayer_Click(object sender, EventArgs e)
+        {
+            if (ListBoxAvailablePlayers.SelectedItems.Count == 0)
+            {
+                lblErrMsg.Text = "Select the player(s)\nyou want to delete.";
+            }
+            else if (ListBoxAvailablePlayers.SelectedItems.Count > 3)
+            {
+                lblErrMsg.Text = "Can't delete more\nthan 3 at a time.";
+            }
+            else
+            {
+                lblErrMsg.Text = "";
+                List<Player> selectedPlayers = new List<Player>();
+                foreach (Player p in ListBoxAvailablePlayers.SelectedItems)
+                {
+                    selectedPlayers.Add(p);
+                }
+                DeletePlayerForm deletePlayer = new DeletePlayerForm(selectedPlayers);
+                DialogResult result = deletePlayer.ShowDialog();
+                if (result == DialogResult.Yes)
+                {
+                    ListBoxAvailablePlayers.Items.Remove(ListBoxAvailablePlayers.SelectedItem);
+                }
+                PopulatePlayerList();
+            }
+        }
+
+        private void PopulatePlayerList()
+        {
+            List<Player> allPlayers = PlayerDb.GetAllPlayers();
+            ListBoxAvailablePlayers.Items.Clear();
+            foreach (Player p in allPlayers)
+            {
+                ListBoxAvailablePlayers.Items.Add(p);
+            }
         }
     }
 }
