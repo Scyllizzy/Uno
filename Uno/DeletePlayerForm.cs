@@ -25,7 +25,7 @@ namespace Uno
             {
                 lblDeleteHeader.Text = "Delete these players?!";
                 lblDeleteHeader.Left = 70;
-                lblPlayerName.Left = 80;
+                lblPlayerName.Left = 40;
             }
             lblPlayerName.Text = string.Join(", ", playersToBeDeleted);
         }
@@ -34,7 +34,7 @@ namespace Uno
         {
             btnDeletePlayer.DialogResult = DialogResult.Yes;
             lblDeleteHeader.ForeColor = Color.Green;
-            lblDeleteHeader.Text = $"{string.Join(" & ", playersToBeDeleted)} has been deleted!";
+            lblDeleteHeader.Text = $"{string.Join(" & ", playersToBeDeleted)} deleted!";
             foreach (Player player in playersToBeDeleted)
             {
                 PlayerDb.Delete(player);
@@ -51,6 +51,12 @@ namespace Uno
         void timer_Tick(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDontDelete_Click(object sender, EventArgs e)
+        {
+            btnDontDelete.DialogResult = DialogResult.Cancel;
+            Close();
         }
     }
 }

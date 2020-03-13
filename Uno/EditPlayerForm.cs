@@ -7,36 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
 
 namespace Uno
 {
-    public partial class AddPlayerForm : Form
+    public partial class EditPlayerForm : Form
     {
-        public AddPlayerForm()
+        private readonly Player P;
+        public EditPlayerForm(Player p)
         {
+            P = p;
             InitializeComponent();
         }
 
-        public Player NewPlayer { get; set; }
-
-        private void BtnSubmitAdd_Click(object sender, EventArgs e)
+        private void EditPlayerForm_Load(object sender, EventArgs e)
         {
-            
+            lblEditPlayerHeader.Text = $"Edit {P}";
+            txtboxFName.Text = P.FirstName;
+            txtboxLName.Text = P.LastName;
+            txtboxEmail.Text = P.Email;
+            txtboxUsername.Text = P.UserName;
+        }
+
+        private void btnSaveChanges_Click(object sender, EventArgs e)
+        {
             if (ValidateFormInput())
             {
-                BtnSubmitAdd.DialogResult = DialogResult.Yes;
-                Player p = new Player()
-                {
-                    FirstName = TxtFirstName.Text,
-                    LastName = TxtLastName.Text,
-                    UserName = TxtUsername.Text,
-                    Email = TxtEmail.Text.ToLower()
-                };
-                NewPlayer = p;
-                lblAddResult.ForeColor = Color.Green;
-                lblAddResult.Text = $"{p.UserName} can now play Uno!";
-                PlayerDb.Add(p);
+                btnSaveChanges.DialogResult = DialogResult.Yes;
+                P.FirstName = txtboxFName.Text;
+                P.LastName = txtboxLName.Text;
+                P.Email = txtboxEmail.Text;
+                P.UserName = txtboxUsername.Text;
+                PlayerDb.Update(P);
+                lblEditPlayerHeader.ForeColor = Color.Green;
+                lblEditPlayerHeader.Text = "Saved changes!";
                 Timer timer = new Timer(); // Auto close form after 2 seconds.
                 timer.Interval = 1000;
                 timer.Tick += new EventHandler(timer_Tick);
@@ -54,32 +57,31 @@ namespace Uno
 
         private bool ValidateFormInput()
         {
-            
             lblFNameErrMsg.Text = "*";
             lblLNameErrMsg.Text = "*";
             lblEmailErrMsg.Text = "*";
             lblUsernameErrMsg.Text = "*";
             bool isValid = true;
-            if (string.IsNullOrWhiteSpace(TxtFirstName.Text))
+            if (string.IsNullOrWhiteSpace(txtboxFName.Text))
             {
                 lblFNameErrMsg.Text = "1-25 characters";
                 isValid = false;
             }
-            if (string.IsNullOrWhiteSpace(TxtLastName.Text))
+            if (string.IsNullOrWhiteSpace(txtboxLName.Text))
             {
                 lblLNameErrMsg.Text = "1-25 characters";
                 isValid = false;
             }
-            int index = TxtEmail.Text.IndexOf('@');
-            if (string.IsNullOrWhiteSpace(TxtEmail.Text) ||     // if user entered spaces or nothing
+            int index = txtboxEmail.Text.IndexOf('@');
+            if (string.IsNullOrWhiteSpace(txtboxEmail.Text) ||     // if user entered spaces or nothing
                 index < 1 ||                                    // if @ is first character
-                TxtEmail.Text.LastIndexOf('.') < index + 2 ||   // if . is before @ or there's no character between them
-                TxtEmail.Text.LastIndexOf('.') == TxtEmail.Text.Length-1)   // if . is last character
+                txtboxEmail.Text.LastIndexOf('.') < index + 2 ||   // if . is before @ or there's no character between them
+                txtboxEmail.Text.LastIndexOf('.') == txtboxEmail.Text.Length - 1)   // if . is last character
             {
                 lblEmailErrMsg.Text = "must contain @ and .";
                 isValid = false;
             }
-            if (string.IsNullOrWhiteSpace(TxtUsername.Text) || TxtUsername.Text.Length < 5)
+            if (string.IsNullOrWhiteSpace(txtboxUsername.Text) || txtboxUsername.Text.Length < 5)
             {
                 lblUsernameErrMsg.Text = "6-15 characters";
                 isValid = false;

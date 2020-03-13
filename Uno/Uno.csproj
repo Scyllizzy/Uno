@@ -72,6 +72,12 @@
     <Compile Include="DeletePlayerForm.Designer.cs">
       <DependentUpon>DeletePlayerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditPlayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPlayerForm.Designer.cs">
+      <DependentUpon>EditPlayerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
       <DependentUpon>202003101614575_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PlayerDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerDetailsForm.Designer.cs">
+      <DependentUpon>PlayerDetailsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Player\Player.cs" />
     <Compile Include="Data\PlayerContext.cs" />
     <Compile Include="Data\PlayerDb.cs" />
@@ -100,6 +112,9 @@
     <EmbeddedResource Include="DeletePlayerForm.resx">
       <DependentUpon>DeletePlayerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditPlayerForm.resx">
+      <DependentUpon>EditPlayerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameMainMenu.resx">
       <DependentUpon>GameMainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003101614575_init.resx">
       <DependentUpon>202003101614575_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerDetailsForm.resx">
+      <DependentUpon>PlayerDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

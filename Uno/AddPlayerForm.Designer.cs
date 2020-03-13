@@ -50,7 +50,7 @@
             this.LblFirstName.Location = new System.Drawing.Point(21, 63);
             this.LblFirstName.Name = "LblFirstName";
             this.LblFirstName.Size = new System.Drawing.Size(58, 13);
-            this.LblFirstName.TabIndex = 0;
+            this.LblFirstName.TabIndex = 6;
             this.LblFirstName.Text = "First name:";
             // 
             // LblLastName
@@ -59,7 +59,7 @@
             this.LblLastName.Location = new System.Drawing.Point(20, 92);
             this.LblLastName.Name = "LblLastName";
             this.LblLastName.Size = new System.Drawing.Size(59, 13);
-            this.LblLastName.TabIndex = 1;
+            this.LblLastName.TabIndex = 7;
             this.LblLastName.Text = "Last name:";
             // 
             // LblUsername
@@ -68,7 +68,7 @@
             this.LblUsername.Location = new System.Drawing.Point(21, 121);
             this.LblUsername.Name = "LblUsername";
             this.LblUsername.Size = new System.Drawing.Size(58, 13);
-            this.LblUsername.TabIndex = 2;
+            this.LblUsername.TabIndex = 8;
             this.LblUsername.Text = "Username:";
             // 
             // LblEmail
@@ -77,7 +77,7 @@
             this.LblEmail.Location = new System.Drawing.Point(44, 150);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(35, 13);
-            this.LblEmail.TabIndex = 3;
+            this.LblEmail.TabIndex = 9;
             this.LblEmail.Text = "Email:";
             // 
             // TxtFirstName
@@ -85,35 +85,35 @@
             this.TxtFirstName.Location = new System.Drawing.Point(81, 59);
             this.TxtFirstName.Name = "TxtFirstName";
             this.TxtFirstName.Size = new System.Drawing.Size(173, 20);
-            this.TxtFirstName.TabIndex = 4;
+            this.TxtFirstName.TabIndex = 0;
             // 
             // TxtEmail
             // 
             this.TxtEmail.Location = new System.Drawing.Point(81, 146);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(173, 20);
-            this.TxtEmail.TabIndex = 5;
+            this.TxtEmail.TabIndex = 3;
             // 
             // TxtUsername
             // 
             this.TxtUsername.Location = new System.Drawing.Point(81, 117);
             this.TxtUsername.Name = "TxtUsername";
             this.TxtUsername.Size = new System.Drawing.Size(173, 20);
-            this.TxtUsername.TabIndex = 6;
+            this.TxtUsername.TabIndex = 2;
             // 
             // TxtLastName
             // 
             this.TxtLastName.Location = new System.Drawing.Point(81, 88);
             this.TxtLastName.Name = "TxtLastName";
             this.TxtLastName.Size = new System.Drawing.Size(173, 20);
-            this.TxtLastName.TabIndex = 7;
+            this.TxtLastName.TabIndex = 1;
             // 
             // BtnSubmitAdd
             // 
-            this.BtnSubmitAdd.Location = new System.Drawing.Point(81, 183);
+            this.BtnSubmitAdd.Location = new System.Drawing.Point(81, 187);
             this.BtnSubmitAdd.Name = "BtnSubmitAdd";
             this.BtnSubmitAdd.Size = new System.Drawing.Size(173, 30);
-            this.BtnSubmitAdd.TabIndex = 8;
+            this.BtnSubmitAdd.TabIndex = 4;
             this.BtnSubmitAdd.Text = "Add Player";
             this.BtnSubmitAdd.UseVisualStyleBackColor = true;
             this.BtnSubmitAdd.Click += new System.EventHandler(this.BtnSubmitAdd_Click);
@@ -125,7 +125,7 @@
             this.lblFNameErrMsg.Location = new System.Drawing.Point(254, 63);
             this.lblFNameErrMsg.Name = "lblFNameErrMsg";
             this.lblFNameErrMsg.Size = new System.Drawing.Size(11, 13);
-            this.lblFNameErrMsg.TabIndex = 9;
+            this.lblFNameErrMsg.TabIndex = 10;
             this.lblFNameErrMsg.Text = "*";
             // 
             // lblLNameErrMsg
@@ -135,7 +135,7 @@
             this.lblLNameErrMsg.Location = new System.Drawing.Point(254, 91);
             this.lblLNameErrMsg.Name = "lblLNameErrMsg";
             this.lblLNameErrMsg.Size = new System.Drawing.Size(11, 13);
-            this.lblLNameErrMsg.TabIndex = 10;
+            this.lblLNameErrMsg.TabIndex = 11;
             this.lblLNameErrMsg.Text = "*";
             // 
             // lblUsernameErrMsg
@@ -145,7 +145,7 @@
             this.lblUsernameErrMsg.Location = new System.Drawing.Point(254, 120);
             this.lblUsernameErrMsg.Name = "lblUsernameErrMsg";
             this.lblUsernameErrMsg.Size = new System.Drawing.Size(11, 13);
-            this.lblUsernameErrMsg.TabIndex = 11;
+            this.lblUsernameErrMsg.TabIndex = 12;
             this.lblUsernameErrMsg.Text = "*";
             // 
             // lblEmailErrMsg
@@ -155,7 +155,7 @@
             this.lblEmailErrMsg.Location = new System.Drawing.Point(254, 150);
             this.lblEmailErrMsg.Name = "lblEmailErrMsg";
             this.lblEmailErrMsg.Size = new System.Drawing.Size(11, 13);
-            this.lblEmailErrMsg.TabIndex = 12;
+            this.lblEmailErrMsg.TabIndex = 13;
             this.lblEmailErrMsg.Text = "*";
             // 
             // lblAddResult
@@ -163,10 +163,10 @@
             this.lblAddResult.AutoSize = true;
             this.lblAddResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddResult.ForeColor = System.Drawing.Color.Black;
-            this.lblAddResult.Location = new System.Drawing.Point(43, 21);
+            this.lblAddResult.Location = new System.Drawing.Point(23, 21);
             this.lblAddResult.Name = "lblAddResult";
             this.lblAddResult.Size = new System.Drawing.Size(134, 24);
-            this.lblAddResult.TabIndex = 13;
+            this.lblAddResult.TabIndex = 5;
             this.lblAddResult.Text = "Add a player!";
             // 
             // AddPlayerForm
