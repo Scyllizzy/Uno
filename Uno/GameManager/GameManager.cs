@@ -8,19 +8,17 @@ namespace Uno.GameManager
 {
     class GameManager
     {
-        public List<Card> DiscardPile { get; set; }
+        public static List<Card> DiscardPile { get; set; }
 
-        public List<Player> ChangePlayer { get; set; }
+        public static List<Player> ChangePlayer { get; set; }
 
-        public Deck DrawPile { get; set; }
+        public static Deck DrawPile { get; set; }
 
 
 
-        public List<Card> AddToDiscard(List<Card> DiscardPile, Card card)
+        public static void AddToDiscard(Card card)
         {
-            
-            return DiscardPile.Add(card);
-
+            DiscardPile.Add(card);
         }
     }
 }

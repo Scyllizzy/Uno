@@ -27,14 +27,16 @@ namespace Uno.Play_Cards
             return cards;
         }
 
-        public Card PlayCard(List<Card> cards, Card card, Card prevCardPlayed)
+        public Card PlayCard(List<Card> cardHand, Card card, Card prevCardPlayed)
         {
             if (card.CardColor == prevCardPlayed.CardColor || card.CardType == prevCardPlayed.CardType)
             {
-                GameManager.AddToDiscard(card);
-                cards.Remove(card);
+                GameManager.GameManager.AddToDiscard(card);
+                cardHand.Remove(card);
             }
             return card;
         }
+
+        
     }
 }
