@@ -78,6 +78,7 @@
     <Compile Include="EditPlayerForm.Designer.cs">
       <DependentUpon>EditPlayerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameManager\GameManager.cs" />
     <Compile Include="GameMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,7 +96,7 @@
       <DependentUpon>202003101614575_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Play Cards\Draw.cs" />
+    <Compile Include="PlayCards\Draw.cs" />
     <Compile Include="PlayerDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,9 +153,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Game Manager\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Kitty.gif" />
   </ItemGroup>

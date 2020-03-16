@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Uno.GameManager;
 
 namespace Uno.Play_Cards
 {
@@ -26,5 +27,14 @@ namespace Uno.Play_Cards
             return cards;
         }
 
+        public Card PlayCard(List<Card> cards, Card card, Card prevCardPlayed)
+        {
+            if (card.CardColor == prevCardPlayed.CardColor || card.CardType == prevCardPlayed.CardType)
+            {
+                GameManager.AddToDiscard(card);
+                cards.Remove(card);
+            }
+            return card;
+        }
     }
 }
