@@ -76,12 +76,12 @@ namespace Uno
                 TxtEmail.Text.LastIndexOf('.') < index + 2 ||   // if . is before @ or there's no character between them
                 TxtEmail.Text.LastIndexOf('.') == TxtEmail.Text.Length-1)   // if . is last character
             {
-                lblEmailErrMsg.Text = "must contain @ and .";
+                lblEmailErrMsg.Text = "must contain @ and . something";
                 isValid = false;
             }
             if (string.IsNullOrWhiteSpace(TxtUsername.Text) || TxtUsername.Text.Length < 5)
             {
-                lblUsernameErrMsg.Text = "6-15 characters";
+                lblUsernameErrMsg.Text = "5-15 characters";
                 isValid = false;
             }
             return isValid;
