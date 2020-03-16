@@ -37,10 +37,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblErrMsg = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnPlayerDetails = new System.Windows.Forms.Button();
             this.lblManagePlayers = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblUno = new System.Windows.Forms.Label();
-            this.BtnPlayerDetails = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,11 +115,11 @@
             // 
             this.lblErrMsg.AutoSize = true;
             this.lblErrMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrMsg.Location = new System.Drawing.Point(12, 289);
+            this.lblErrMsg.Location = new System.Drawing.Point(15, 282);
+            this.lblErrMsg.MaximumSize = new System.Drawing.Size(120, 0);
             this.lblErrMsg.Name = "lblErrMsg";
-            this.lblErrMsg.Size = new System.Drawing.Size(45, 32);
+            this.lblErrMsg.Size = new System.Drawing.Size(0, 16);
             this.lblErrMsg.TabIndex = 7;
-            this.lblErrMsg.Text = "label2\r\n\r\n";
             // 
             // groupBox1
             // 
@@ -134,6 +134,16 @@
             this.groupBox1.Size = new System.Drawing.Size(139, 355);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
+            // 
+            // BtnPlayerDetails
+            // 
+            this.BtnPlayerDetails.Location = new System.Drawing.Point(9, 100);
+            this.BtnPlayerDetails.Name = "BtnPlayerDetails";
+            this.BtnPlayerDetails.Size = new System.Drawing.Size(119, 39);
+            this.BtnPlayerDetails.TabIndex = 1;
+            this.BtnPlayerDetails.Text = "Player Details";
+            this.BtnPlayerDetails.UseVisualStyleBackColor = true;
+            this.BtnPlayerDetails.Click += new System.EventHandler(this.BtnPlayerDetails_Click);
             // 
             // lblManagePlayers
             // 
@@ -162,16 +172,6 @@
             this.lblUno.Size = new System.Drawing.Size(87, 31);
             this.lblUno.TabIndex = 5;
             this.lblUno.Text = "UNO!";
-            // 
-            // BtnPlayerDetails
-            // 
-            this.BtnPlayerDetails.Location = new System.Drawing.Point(9, 100);
-            this.BtnPlayerDetails.Name = "BtnPlayerDetails";
-            this.BtnPlayerDetails.Size = new System.Drawing.Size(119, 39);
-            this.BtnPlayerDetails.TabIndex = 1;
-            this.BtnPlayerDetails.Text = "Player Details";
-            this.BtnPlayerDetails.UseVisualStyleBackColor = true;
-            this.BtnPlayerDetails.Click += new System.EventHandler(this.BtnPlayerDetails_Click);
             // 
             // GameMainMenu
             // 
