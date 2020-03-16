@@ -60,5 +60,13 @@ namespace Uno
 
             listBoxDeck.DataSource = list;
         }
+
+        private void UnoButtonClick(object sender, EventArgs e)
+        {
+            //Enables visibility once the player gets to 2 cards and enables click
+            BtnUno.Visible = true;
+            BtnUno.Enabled = true;
+            MessageBox.Show("UNO!!!");
+        }
     }
 }
