@@ -95,6 +95,7 @@
       <DependentUpon>202003101614575_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Play Cards\Draw.cs" />
     <Compile Include="PlayerDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
